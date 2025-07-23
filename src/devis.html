@@ -1,0 +1,174 @@
+---
+layout: default
+permalink: /devis
+title: Faites estimer vos travaux grâce à notre devis en ligne 100% gratuit !
+description: "Vous souhaitez chiffrer vos travaux ? Remplissez notre devis en ligne gratuit en quelques clics. Nos agents se chargeront de vous donner une réponse rapide"
+keywords: Devis
+---
+
+
+<section class="slide1">
+  <div class="bgblack"></div>
+  <div class="container">
+    <h1>Demandez un devis en ligne gratuitement</h1>
+    <p class="pull-right"><a href="{% link accueil.html %}">Accueil</a> / devis </p>
+  </div>
+</section>
+<section class="devis">
+  <div id="devis">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <form role="form" id="devisForm" method="post" action="{{ site.data.company.url.notify }}">
+            <input type="hidden" name="redirectUrl" value="{{site.data.company.url.redirect}}" />
+            <input type="hidden" name="type" value="devis" />
+            <input type="hidden" name="website" value="{{ site.data.company.website }}" />
+            <input type="hidden" name="lang" value="{{ site.data.company.lang }}" />
+            <input type="hidden" name="firstName" value="" />
+            <input type="hidden" name="key" value="{{ site.data.company.recaptcha.server }}">
+            <div class="row">
+              <div class="col-md-5">
+                <fieldset>
+                  <legend>Coordonnées</legend>
+
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group has-feedback ">
+                        <label for="lastname">Prénom*</label>
+                        <input required="" type="text" class="form-control " id="lastname" name="lastname" value="">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group has-feedback ">
+                        <label for="name">Nom*</label>
+                        <input required="" type="text" class="form-control " id="name" name="name" value="">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group has-feedback ">
+                        <label for="address">Adresse</label>
+                        <input type="text" class="form-control " id="address" name="address" value="">
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-5">
+                      <div class="form-group has-feedback ">
+                        <label for="zipcode">Code postal*</label>
+                        <input required="" type="text" class="form-control " id="zipcode" name="zipcode" value="">
+                      </div>
+                    </div>
+                    <div class="col-md-7">
+                      <div class="form-group has-feedback ">
+                        <label for="city">Ville</label>
+                        <input type="text" class="form-control" id="city" name="city" value="">
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group has-feedback ">
+                        <label for="email">E-mail*</label>
+                        <input required="" type="text" class="form-control " id="email" name="email" value="">
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group has-feedback ">
+                        <label for="phone">Téléphone*</label>
+                        <input required="" type="text" class="form-control " id="phone" name="phone" value="">
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+
+              </div>
+
+              <div class="col-md-6 col-md-offset-1">
+                <fieldset>
+                  <legend>Demande</legend>
+                  <div class="form-group has-feedback ">
+                    <div class="checkbox" style="margin-top: 0;">
+
+                      <label><input type="checkbox" name="checkbox1">Verrière d’atelier </label>
+                    </div>
+                    <div class="checkbox" style="margin-top: 0;">
+
+                      <label><input type="checkbox" name="checkbox2">Verrière créative</label>
+                    </div>
+                    <div class="checkbox" style="margin-top: 0;">
+
+                      <label><input type="checkbox" name="checkbox3">Verrière d’angle</label>
+                    </div>
+                  </div>
+                  <legend>Dimension approximative </legend>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group has-feedback ">
+                        <label for="width">Longueur en mètre </label>
+                        <input type="text" class="form-control" id="width" name="width" value="">
+
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group has-feedback ">
+                        <label for="height">Longueur en mètre </label>
+                        <input type="text" class="form-control" id="height" name="height" value="">
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group has-feedback ">
+                    <label for="form_date1">Date souhaitée d’intervention </label>
+                    <div class="input-group bootstrap-datepicker">
+                      <input type="text" name="date1" id="form_date1" value="" class="form-control"
+                        placeholder="15/12/2024"> <span class="input-group-addon"><span
+                          class="fa fa-calendar fa-fw"></span></span>
+                    </div>
+                  </div>
+                  <div class="form-group has-feedback ">
+                    <label for="message">Message</label>
+                    <textarea rows="3" name="message" class="form-control" id="message"></textarea>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <div class="form-group">
+                  <div class="g-recaptcha" data-sitekey="{{ site.data.company.recaptcha.client }}">
+                  </div>
+                  <br />
+                  <div id="devis-form-response"></div>
+              </div>
+              <div class="checkbox d-flex">
+                  <input name="condition" type="checkbox"
+                      style="height:1.5rem; width:1.5rem; vertical-align: middle;" />
+                  <span class="contact_space-form--label"
+                      style="color: #000 !important; font-size: 1.2rem; margin-left: 1rem;">
+                      En utilisant ce formulaire, vous acceptez le stockage et la gestion
+                      de vos données par ce site *</span>
+                  <i class="fa fa-info-square" aria-hidden="true"></i>
+              </div>
+          </div>
+
+
+            <br>
+            <div class="buttondevis text-center">
+              <button type="submit" name="devis form-submit" class="button">Envoyer</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

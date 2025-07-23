@@ -1,0 +1,92 @@
+<header class="slider">
+  <div class="bgblack2"></div>
+  <div class="middle">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6  fadeInUp animated">
+          <h1 style="font-size: 45px; color: white;">Songez à une verrière sur Paris pour laisser pénétrer la lumière
+            dans votre intérieur !</h1>
+          <h2 style="font-size: 30px; font-weight: normal;"><strong>Verrière Paris vous propose des verrières-sur mesure
+              qui répondront parfaitement à vos attentes. </strong></h2><strong>
+            <div class="div01"></div>
+            <p><a href="nos-verrieres" class="button">Toutes nos verrières </a></p>
+          </strong>
+        </div>
+
+        <div class="col-lg-6 fadeInRight animated">
+          <form class="contact_content-form" id="contactForm" method="post" action="{{ site.data.company.url.notify }}">
+            <input type="hidden" name="lang" value="fr" />
+            <input type="hidden" name="redirectUrl" value="{{site.data.company.url.redirect}}" />
+            <input type="hidden" name="type" value="contact" />
+            <input type="hidden" name="website" value="{{ site.data.company.website }}" />
+            <input type="hidden" name="lang" value="{{ site.data.company.lang }}" />
+            <input type="hidden" name="firstName" value="" />
+            <input type="hidden" name="key" value="{{ site.data.company.recaptcha.server }}" />
+            <div class="pre-reservation">
+              <h3 class="tit">Estimation en ligne et gratuite</h3>
+              <div class="div01"></div>
+              <div class="row ">
+                <div class="col-md-6">
+                  <div class="form-group has-feedback ">
+                    <input type="text" class="form-control " id="name" name="name" value="" placeholder="Nom">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group has-feedback ">
+                    <input type="text" class="form-control " id="email" name="email" value="" placeholder="Mail">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group has-feedback ">
+                    <input type="text" class="form-control " id="phone" name="phone" value="" placeholder="Téléphone">
+                  </div>
+
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group has-feedback ">
+                    <!--  <label for="form_select1">Types de prestations </label> -->
+                    <select name="select1" id="form_select1" class="form-control">
+                      <option>Type de verrière </option>
+                      <option>Verrière d’atelier </option>
+                      <option> Verrière créative </option>
+                      <option> Verrière créative </option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="checkbox d-flex mb-2">
+                    <input name="condition" type="checkbox" style="
+                        height: 20px;
+                        width: 20px;
+                        vertical-align: middle;
+                        margin-right: 10px;
+                      " />
+                    <span class="contact_content-form--label" style="font-size: 14px; color: #fff">
+                      En utilisant ce formulaire, vous acceptez le stockage et la
+                      gestion de vos données par ce site *
+                    </span>
+                    <i class="fa fa-info-square" aria-hidden="true"></i>
+                  </div>
+                  <div id="contact-form-response"></div>
+                  <div class="form-group d-flex justify-content-center">
+                    <div class="g-recaptcha" data-sitekey="{{ site.data.company.recaptcha.client }}"></div>
+                    <br />
+                    <input style="display: none" type="submit" value="Submit" class="wpcf7-wpcf7-submit" />
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="text-center d-flex justify-content-center mx-auto">
+                    <button type="submit" name="devis" class="button form-submit">Envoyer </button>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

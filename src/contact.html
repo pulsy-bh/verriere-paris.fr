@@ -1,0 +1,143 @@
+---
+layout: default
+permalink: /contact
+title: "Contactez-nous ! | Baies & vérandas | 01 60 86 71 21"
+description: "N'hésitez pas à nous contacter pour tout renseignement. Nos agents sérieux et qualifiés sauront bien vous répondre et vous aiguiller comme il se doit."
+keywords: "Contact"
+---
+
+<section class="slide1">
+  <div class="bgblack"></div>
+  <div class="container">
+    <h1>Prenez Contact avec nous! </h1>
+    <p class="pull-right"><a href="{% link accueil.html %}">Accueil</a> / contact </p>
+  </div>
+</section>
+<section class="bandeau4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="./assets/img/icon9.png" alt="icone téléphone message">
+        <h2>Appelez-nous </h2>
+        <p><a href="tel:0185538977">01 85 53 89 77</a></p>
+
+        <br>
+        <img src="./assets/img/icon10.png" alt="icone oiseau">
+        <h2>Envoyez-nous un email </h2>
+        <p><a href="mailto:contact@verriere-paris.fr">contact@verriere-paris.fr</a></p>
+      </div>
+      <div class="col-md-6">
+        <img src="./assets/img/locaux.png" alt="locaux baies et vérandas" class="img img-responsive"
+          style="border-radius: 15px; max-width: 500px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 bg1">
+        <h2>Rester en contact </h2>
+        <h3>Contactez-nous </h3>
+        <div class="divider"></div>
+        <p>Pour plus d’informations, nos professionnels de la verrière parisienne se tiennent à votre entière
+          disposition. </p>
+        <div class="div01"></div>
+        <ul class="infos">
+          <li><i class="fas fa-map-marker-alt"></i>&nbsp; 2, rue du Camp Romain , 91490 Milly-La-Forêt</li>
+          <li><i class="fas fa-phone-alt"></i> &nbsp; <a href="tel:0185538977">01 85 53 89 77</a></li>
+          <li><i class="fas fa-envelope"></i> &nbsp; <a
+              href="mailto:contact@verriere-paris.fr">contact@verriere-paris.fr</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-5 col-lg-offset-1">
+        <h2 class="to-be-white">Une réponse en 48h ouvrées </h2>
+        <h3>Remplissez notre formulaire </h3>
+        <div class="divider"></div>
+        <form class="contact_content-form" id="contactForm" method="post" action="{{ site.data.company.url.notify }}">
+          <input type="hidden" name="lang" value="fr" />
+          <input type="hidden" name="redirectUrl" value="{{site.data.company.url.redirect}}" />
+          <input type="hidden" name="type" value="contact" />
+          <input type="hidden" name="website" value="{{ site.data.company.website }}" />
+          <input type="hidden" name="lang" value="{{ site.data.company.lang }}" />
+          <input type="hidden" name="firstName" value="" />
+          <input type="hidden" name="key" value="{{ site.data.company.recaptcha.server }}" />
+          <div class="form-group has-feedback ">
+            <input type="text" class="form-control to-be-white " id="name" name="name" value="" placeholder="Nom">
+          </div>
+
+          <div class="form-group has-feedback ">
+            <input type="text" class="form-control to-be-white " id="email" name="email" value="" placeholder="E-mail">
+          </div>
+
+          <div class="form-group has-feedback ">
+            <textarea rows="6" name="message" class="form-control to-be-white" id="message" placeholder="Message"></textarea>
+          </div>
+          <br>
+
+          <div class="col-md-12">
+            <div class="checkbox d-flex mb-2">
+              <input name="condition" type="checkbox" style="
+                  height: 20px;
+                  width: 20px;
+                  vertical-align: middle;
+                  margin-right: 10px;
+                " />
+              <span class="contact_content-form--label to-be-white" style="font-size: 14px; color: #000">
+                En utilisant ce formulaire, vous acceptez le stockage et la
+                gestion de vos données par ce site *
+              </span>
+              <i class="fa fa-info-square" aria-hidden="true"></i>
+            </div>
+            <div id="contact-form-response"></div>
+            <div class="form-group d-flex justify-content-start">
+              <div class="g-recaptcha" data-sitekey="{{ site.data.company.recaptcha.client }}"></div>
+              <br />
+              <input style="display: none" type="submit" value="Submit" class="wpcf7-wpcf7-submit" />
+            </div>
+          </div>
+
+          <div class="form-group has-feedback pseudoForm">
+            <label for="form_pseudo">Pseudo</label> <input type="text" name="pseudo" id="form_pseudo" value=""
+              class="form-control" placeholder="Pseudonyme">
+          </div>
+
+          <div class="buttondevis text-left ml-5">
+            <button type="submit" name="contact form-submit" class="button">Envoyer un message </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="bandeau5" id="#form-newsletter">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Nos nouveautés </h2>
+        <p>Vous souhaitez recevoir nos derniers articles sur les verrières à Paris et en régions voisines ? </p>
+      </div>
+      <div class="col-md-6">
+        <div class="div03"></div>
+        <div id="form-newsletter">
+
+          <form role="form" method="post" action="contact#form-newsletter">
+            <div class="row">
+              <div class="col-md-6 col-md-offset-2 nopad">
+                <div class="form-group has-feedback ">
+                  <input type="text" class="form-control " id="email" name="email" value=""
+                    placeholder="Écrivez votre email  ">
+                </div>
+              </div>
+
+              <div class="col-md-4 nopad">
+                <button type="submit" name="newsletter" class="button2">Je m’inscris </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
